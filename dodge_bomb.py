@@ -15,15 +15,15 @@ DELTA = {
         pg.K_RIGHT:(+5,0),
          }
 
-direction ={pg.transform.flip:image.load("fig/3.png");transform.flip("fig/3.png",True,False),
-            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",45,1.0),
-            pg.transform.flip:image.load("fig/3.png");transform.flip("fig/3.png",True,False),
-            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",90,1.0),
-            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",-45,1.0),
-            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",45,1.0),
-            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",-90,1.0),
-            pg.transform.rotozoom:image.ioad("fig/3.png");transform.rotozoom("fig/3.png",-45,1.0),
-            pg.image.load:image.load("fig/3.png"),}
+direction ={(pg.transform.flip:image.load("fig/3.png");transform.flip("fig/3.png",True,False)),
+            (pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",45,1.0)),
+            (pg.transform.flip:image.load("fig/3.png");transform.flip("fig/3.png",True,False)),
+            (pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",90,1.0)),
+            (pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",-45,1.0)),
+            (pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",45,1.0)),
+            (pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",-90,1.0)),
+            (pg.transform.rotozoom:image.ioad("fig/3.png");transform.rotozoom("fig/3.png",-45,1.0)),
+            (pg.image.load:image.load("fig/3.png")),}
 
 
         
