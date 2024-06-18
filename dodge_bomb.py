@@ -2,15 +2,32 @@ import os
 import random
 import sys
 import pygame as pg
+import image
+import transform
+
 
 
 WIDTH, HEIGHT = 1200, 700
 DELTA = {
-        pg.K_UP: (0,-5),
+        "": (0,-5),
         pg.K_DOWN: (0,+5),
         pg.K_LEFT: (-5,0),
         pg.K_RIGHT:(+5,0),
          }
+
+direction ={pg.transform.flip:image.load("fig/3.png");transform.flip("fig/3.png",True,False),
+            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",45,1.0),
+            pg.transform.flip:image.load("fig/3.png");transform.flip("fig/3.png",True,False),
+            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",90,1.0),
+            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",-45,1.0),
+            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",45,1.0),
+            pg.transform.rotozoom:image.load("fig/3.png");transform.rotozoom("fig/3.png",-90,1.0),
+            pg.transform.rotozoom:image.ioad("fig/3.png");transform.rotozoom("fig/3.png",-45,1.0),
+            pg.image.load:image.load("fig/3.png"),}
+
+
+        
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -43,6 +60,7 @@ def main():
     vx,vy = +5 ,+5
     clock = pg.time.Clock()
     tmr = 0
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: 
@@ -53,10 +71,15 @@ def main():
 
         key_lst = pg.key.get_pressed()
         sum_mv = [0, 0]
+        
         for k, v in DELTA.items():
             if key_lst[k]:
                 sum_mv[0] += v[0]
                 sum_mv[1] += v[1]
+        #for d,c in direction.items():
+            
+                
+                
         kk_rct.move_ip(sum_mv)
         if check_bound(kk_rct) != (True, True):
             kk_rct.move_ip(-sum_mv[0], -sum_mv[1])
